@@ -1,0 +1,397 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+    --accent: #38bdf8;
+    --accent-soft: rgba(56, 189, 248, 0.15);
+}
+
+/* =========================
+   RESET + BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    background: radial-gradient(circle at top, #1e293b, #020617 70%);
+    color: #e5e7eb;
+}
+
+/* =========================
+   GLOBAL TYPOGRAPHY
+========================= */
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+/* Accent underline */
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 6px;
+    border-radius: 2px;
+}
+
+p {
+    color: #cbd5f5;
+    margin-bottom: 1rem;
+    max-width: 600px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e5e7eb;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* HERO LAYOUT */
+.hero {
+    padding: 80px 10%;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* LEFT SIDE */
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* RIGHT SIDE CTA */
+.hero-cta {
+    display: flex;
+    align-items: center;
+}
+
+/* BUTTON STYLE */
+.cta-button {
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-cta {
+        margin-top: 20px;
+    }
+}
+
+/* =========================
+   CARDS / CONTENT
+========================= */
+section,
+article {
+    background: linear-gradient(145deg, #111827, #020617);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    margin-bottom: 2.5rem;
+    padding: 2.5rem;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    transition: 0.3s;
+}
+
+section:hover,
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* subtle hover border */
+main>section {
+    border-left: 3px solid transparent;
+}
+
+main>section:hover {
+    border-left: 3px solid var(--accent);
+}
+
+/* =========================
+   IMAGES
+========================= */
+img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+.about-image {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+fieldset {
+    background: #020617;
+    border: 1px solid #1f2937;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+legend {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+label {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    display: block;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    background: #020617;
+    color: white;
+    font-size: 0.9rem;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+/* focus state */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--accent);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    border: none;
+    padding: 0.9rem;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #94a3b8;
+    border-top: 1px solid #1f2937;
+    margin-top: 3rem;
+    background: #020617;
+}
+
+/* =========================
+   CASE STUDY
+========================= */
+.case-hero {
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+    background: linear-gradient(145deg, #111827, #020617);
+}
+
+.case-section {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.case-image {
+    width: 100%;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+}
+
+.case-section .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    header section {
+        padding: 4rem 1rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.case-image {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links i {
+    font-size: 1.2rem;
+}

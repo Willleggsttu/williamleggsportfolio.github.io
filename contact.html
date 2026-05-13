@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Contact Will Leggs | Content Creator</title>
+    <meta name="description"
+        content="Get in touch with Will Leggs for video production, editing, and content creation projects. Let's work together.">
+
+    <meta name="author" content="Will Leggs">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Will Leggs">
+    <meta property="og:description" content="Reach out for video production and content creation services.">
+    <meta property="og:image" content="assets/images/profile/headshot.jpg">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <h2 class="logo">Will Leggs</h2>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">My Work</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO -->
+        <section class="hero reveal">
+            <h1>Let’s Work Together</h1>
+            <p>Have a project in mind? I’d love to help bring your ideas to life.</p>
+        </section>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- CONTACT CTA -->
+        <section class="reveal">
+            <h2>Get in Touch</h2>
+            <p>
+                I specialize in video production, editing, and content strategy for brands and creators.
+                Whether you need short-form content or a full project, feel free to reach out.
+            </p>
+
+            <p>
+                Prefer email? Contact me directly at:
+                <a href="mailto:Willleggs3@outlook.com" class="btn">Willleggs3@outlook.com</a>
+            </p>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section class="reveal">
+            <h2>Start Your Project</h2>
+            <p>Fill out the form below and I’ll respond within 24–48 hours.</p>
+
+            <form action="#" method="post" class="contact-form">
+
+                <!-- CLIENT INFO -->
+                <fieldset>
+                    <legend>Your Information</legend>
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="company">Company / Brand Name</label>
+                    <input type="text" id="company" name="company">
+                </fieldset>
+
+                <!-- PROJECT DETAILS -->
+                <fieldset>
+                    <legend>Project Details</legend>
+
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a Service --</option>
+                        <option value="video-production">Video Production</option>
+                        <option value="video-editing">Video Editing</option>
+                        <option value="social-media">Social Media Content</option>
+                    </select>
+
+                    <label for="budget">Project Budget</label>
+                    <select id="budget" name="budget">
+                        <option value="">-- Select Budget --</option>
+                        <option value="500">$100 - $500</option>
+                        <option value="1500">$500 - $1500</option>
+                        <option value="3000">$1500+</option>
+                    </select>
+
+                    <label for="timeline">Project Timeline</label>
+                    <input type="text" id="timeline" name="timeline" placeholder="e.g. 2 weeks, 1 month">
+
+                    <label for="message">Project Description</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Describe your project goals..."
+                        required></textarea>
+                </fieldset>
+
+                <button type="submit" class="btn">Send Message</button>
+
+            </form>
+        </section>
+
+        <!-- SOCIAL LINKS -->
+        <section class="reveal">
+            <h2>Connect With Me</h2>
+            <p>Follow my work and connect professionally.</p>
+
+            <ul class="nav-links social-links">
+
+                <li>
+                    <a href="https://www.linkedin.com/in/william-leggs-5a9534277/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/will.leggs/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@luvragerwill/videos" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                        YouTube
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                        TikTok
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- IMAGE -->
+        <section class="reveal">
+            <h2>My Creative Workspace</h2>
+            <img src="assets/images/video-editing.jpg" alt="Video editing workspace with professional editing software"
+                class="case-image" loading="lazy">
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© Will Leggs Portfolio</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
